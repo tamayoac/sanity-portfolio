@@ -18,7 +18,8 @@ export const experienceType = defineType({
       defineField({
         name: 'description',
         title: 'Description',
-        type: 'text',
+        type: 'array', 
+        of: [{ type: 'block'}]
       }),
       defineField({
         name: 'from',

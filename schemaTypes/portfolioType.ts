@@ -11,14 +11,12 @@ export const portfolioType = defineType({
       type: 'string',
     }),
     defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-    }),
-    defineField({
       name: 'introduction',
       title: 'Introduction',
-      type: 'text',
+      type: 'array',
+      of: [{ 
+        type: 'block',
+      }]
     }),
     defineField({
       name: 'about',

@@ -3,7 +3,7 @@ import {visionTool} from '@sanity/vision'
 import {structureTool} from 'sanity/structure'
 import {schemaTypes} from './schemaTypes'
 import {getStartedPlugin} from './plugins/sanity-plugin-tutorial'
-import { iconPicker } from 'sanity-plugin-icon-picker';
+import {iconPicker} from 'sanity-plugin-icon-picker';
 
 const devOnlyPlugins = [getStartedPlugin()]
 
