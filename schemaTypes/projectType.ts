@@ -1,9 +1,8 @@
 import { defineType } from 'sanity';
-import { PlayIcon } from '@sanity/icons'
 
-export const socialType = defineType({
-  name: 'social',
-  title: 'Social',
+export const projectType = defineType({
+  name: 'project',
+  title: 'Project',
   type: 'document',
   fields: [
     {
@@ -16,10 +15,5 @@ export const socialType = defineType({
       title: 'Link',
       type: 'url',
     },
-    {
-      title: "Icon",
-      name: "icon",
-      type: "iconPicker"
-    }
   ],
 });

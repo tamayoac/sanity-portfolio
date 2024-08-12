@@ -3,6 +3,7 @@ import {visionTool} from '@sanity/vision'
 import {structureTool} from 'sanity/structure'
 import {schemaTypes} from './schemaTypes'
 import {getStartedPlugin} from './plugins/sanity-plugin-tutorial'
+import { iconPicker } from 'sanity-plugin-icon-picker';
 
 const devOnlyPlugins = [getStartedPlugin()]
 
@@ -13,7 +14,7 @@ export default defineConfig({
   projectId: '8ylc0gmg',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
+  plugins: [iconPicker(), structureTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
 
   schema: {
     types: schemaTypes,

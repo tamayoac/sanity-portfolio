@@ -1,7 +1,5 @@
 // src/schemas/portfolioType.js
 import { defineType, defineField, defineArrayMember } from 'sanity';
-import { experienceType } from './experienceType'; // Import the experience type
-import { socialType } from './socialType';
 export const portfolioType = defineType({
   name: 'portfolio',
   title: 'Portfolio',
@@ -18,10 +16,16 @@ export const portfolioType = defineType({
       type: 'string',
     }),
     defineField({
-        name: 'introduction',
-        title: 'Introduction',
-        type: 'text',
-      }),
+      name: 'introduction',
+      title: 'Introduction',
+      type: 'text',
+    }),
+    defineField({
+      name: 'about',
+      title: 'About',
+      type: 'array', 
+      of: [{ type: 'block'}]
+    }),
     defineField({
       name: 'socials',
       title: 'Socials',
@@ -33,6 +37,12 @@ export const portfolioType = defineType({
       title: 'Experiences',
       type: 'array',
       of: [defineArrayMember({ type: 'reference', to: [{ type: 'experience' }] })],
+    }),
+    defineField({
+      name: 'projects',
+      title: 'Projects',
+      type: 'array',
+      of: [defineArrayMember({ type: 'reference', to: [{ type: 'project' }] })],
     }),
   ],
 });``
