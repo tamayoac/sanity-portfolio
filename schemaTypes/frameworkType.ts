@@ -15,5 +15,10 @@ export const frameworkType = defineType({
       title: 'Version',
       type: 'string',
     },
+    {
+      name: 'svgIcon',
+      title: 'SVG Icon',
+      type: 'inlineSvg',
+    },
   ],
 });

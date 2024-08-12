@@ -31,6 +31,11 @@ export const portfolioType = defineType({
       of: [defineArrayMember({ type: 'reference', to: [{ type: 'social' }] })],
     }),
     defineField({
+      title: 'Use SVG?',
+      name: 'isSvg',
+      type: 'boolean'
+    }),
+    defineField({
       name: 'experiences',
       title: 'Experiences',
       type: 'array',
