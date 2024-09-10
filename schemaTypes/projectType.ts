@@ -13,10 +13,30 @@ export const projectType = defineType({
       validation: Rule => Rule.required(),
     }),
     defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      description: 'A URL-friendly identifier for the project, auto-generated from the project name.',
+      options: {
+        source: 'name',
+        maxLength: 96,
+      },
+      validation: Rule => Rule.required(),
+    }),
+    defineField({
+      name: 'shortDescription',
+      title: 'Short Description',
+      type: 'array', 
+      of: [{ type: 'block'}],
+      description: 'A brief overview of the project.',
+      validation: Rule => Rule.required(),
+    }),
+    defineField({
       name: 'description',
       title: 'Description',
-      type: 'text',
-      description: 'A brief overview of the project.',
+      type: 'array', 
+      of: [{ type: 'block'}],
+      description: 'A overview of the project.',
       validation: Rule => Rule.required(),
     }),
     defineField({
