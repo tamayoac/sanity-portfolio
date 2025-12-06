@@ -47,5 +47,14 @@ export const portfolioType = defineType({
       type: 'array',
       of: [defineArrayMember({ type: 'reference', to: [{ type: 'project' }] })],
     }),
+    defineField({
+      name: 'resume',
+      title: 'Resume (PDF)',
+      type: 'file',
+      options: {
+        accept: 'application/pdf',
+        storeOriginalFilename: true,
+      },
+    }),
   ],
-});``
+});
