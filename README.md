@@ -17,10 +17,7 @@ This is the Sanity Studio backing the portfolio site (projects, experiences, soc
    npm install
    ```
 
-2) Configure project (already set)  
-   - `projectId`: `8ylc0gmg`  
-   - `dataset`: `production`  
-   - Edit `sanity.config.ts` if you need to change these.
+2) Configure project (already set in `sanity.config.ts` — customize with your own IDs/datasets).
 
 3) Run Studio locally  
    ```bash
